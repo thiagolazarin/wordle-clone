@@ -64,10 +64,10 @@ function getCurrentLanguage(){
   let button = document.getElementById('language-btt');
 
   if(currentLanguage === 'pt'){
-    button.innerHTML = 'PT'
+    button.innerHTML = `<div class="logo-container">Change Language <img src="brazil.png" class="logo"></div`
   }
   else if(currentLanguage === 'en'){
-    button.innerHTML = 'EN'
+    button.innerHTML = `<div class="logo-container">Change Language <img src="united-states.png" class="logo"></div`
   }
 }
 
@@ -209,6 +209,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (guessedWords.length === 6) {
       window.alert(`Sorry, you have no more guesses! The word is ${word}.`);
+      // const result = window.confirm('Do you like play again?');
+      // if(result){
+      //   word = await startOrResetGame();
+      // }
+      // else{
+      //   return;
+      // }
+      // word = await startOrResetGame()
     }
 
     guessedWords.push([]);
