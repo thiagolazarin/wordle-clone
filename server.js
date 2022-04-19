@@ -1,6 +1,7 @@
 const cors = require('cors')
 const express = require('express');
 const app = express();
+const path = require('path')
 
 app.use(cors())
 
@@ -8,7 +9,7 @@ let wordsInPT = ["teste", "cinco", "arara", "sagaz", "nobre", "algoz"];
 let wordInEN = ["womem", "fiver", "seven", "pedro", "sugar", "pudim"];
 let results = {winners: 0, level: {first: 0, second: 0, third: 0, fourth: 0, fifth: 0, sixth: 0}};
 
-// app.use(express.static('public'))
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/word/:language', (req, res) => {
     let randomWord = Math.floor(Math.random() * (6 - 1) + 1)
