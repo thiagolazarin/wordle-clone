@@ -7,8 +7,9 @@ const port = process.env.PORT || 3001
 
 app.use(cors())
 
-let wordsInPT = ["teste", "cinco", "arara", "sagaz", "nobre", "algoz"];
-let wordInEN = ["womem", "fiver", "seven", "about", "sugar", "adult"];
+let wordsInPT = ["teste", "cinco", "arara", "sagaz", "nobre", "algoz", "casal", "torpe", "muito", "fútil", "etnia", "corja", "porra", "crivo", "brado", "gleba", "pauta"];
+let wordInEN = ["womem", "fiver", "seven", "about", "sugar", "adult", "DANCE",
+"DEATH","DEPTH","DOUBT","DRAFT","DRAMA","DREAM","DRESS","DRINK","DRIVE","EARTH","ENEMY","ENTRY","ERROR","EVENT","FAITH","FAULT","FIELD","FIGHT","FINAL","FLOOR","FOCUS","FORCE","FRAME","FRANK","FRONT","FRUIT","GLASS","GRANT","GRASS","GREEN","GROUP","GUIDE","HEART","HORSE","HOTEL","HOUSE","IMAGE","INDEX","INPUT","ISSUE","JAPAN","JONES","JUDGE","KNIFE"];
 let results = {winners: 0, level: {first: 0, second: 0, third: 0, fourth: 0, fifth: 0, sixth: 0}};
 
 app.use(express.static(path.join(__dirname, 'public')))

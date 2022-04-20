@@ -207,16 +207,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       await showResultsOnModal();
     }
 
-    if (guessedWords.length === 6) {
+    if (guessedWords.length === 6) {  
       window.alert(`Sorry, you have no more guesses! The word is ${word}.`);
-      // const result = window.confirm('Do you like play again?');
-      // if(result){
-      //   word = await startOrResetGame();
-      // }
-      // else{
-      //   return;
-      // }
-      // word = await startOrResetGame()
+      alert(`Pls refresh your page to play again!`)
     }
 
     guessedWords.push([]);
